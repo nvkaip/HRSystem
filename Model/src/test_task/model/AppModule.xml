@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="DepartmentsView1"
+    ViewObjectName="test_task.model.DepartmentsView"/>
+  <ViewUsage
+    Name="EmployeesView1"
+    ViewObjectName="test_task.model.EmployeesView"/>
+  <ViewUsage
+    Name="JobsView1"
+    ViewObjectName="test_task.model.JobsView"/>
+  <ViewUsage
+    Name="EmployeesView2"
+    ViewObjectName="test_task.model.EmployeesView"/>
+  <ViewUsage
+    Name="EmployeesView3"
+    ViewObjectName="test_task.model.EmployeesView"/>
+  <ViewUsage
+    Name="EmployeesView4"
+    ViewObjectName="test_task.model.EmployeesView"/>
+  <ViewUsage
+    Name="DepartmentsView2"
+    ViewObjectName="test_task.model.DepartmentsView"/>
+  <ViewLinkUsage
+    Name="EmpManagerFkLink1"
+    ViewLinkObjectName="test_task.model.EmpManagerFkLink"
+    SrcViewUsageName="test_task.model.AppModule.EmployeesView1"
+    DstViewUsageName="test_task.model.AppModule.EmployeesView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="EmpJobFkLink1"
+    ViewLinkObjectName="test_task.model.EmpJobFkLink"
+    SrcViewUsageName="test_task.model.AppModule.JobsView1"
+    DstViewUsageName="test_task.model.AppModule.EmployeesView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="EmpDeptFkLink1"
+    ViewLinkObjectName="test_task.model.EmpDeptFkLink"
+    SrcViewUsageName="test_task.model.AppModule.DepartmentsView1"
+    DstViewUsageName="test_task.model.AppModule.EmployeesView4"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="DeptMgrFkLink1"
+    ViewLinkObjectName="test_task.model.DeptMgrFkLink"
+    SrcViewUsageName="test_task.model.AppModule.EmployeesView1"
+    DstViewUsageName="test_task.model.AppModule.DepartmentsView2"
+    Reversed="false"/>
+</AppModule>
